@@ -12,7 +12,7 @@ local tags = {
   {
     icon = icons.code,
     type = 'code',
-    defaultApp = 'code',
+    defaultApp = 'Code',
     screen = 1
   },
   {
