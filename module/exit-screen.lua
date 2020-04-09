@@ -94,7 +94,7 @@ local lock = buildButton(icons.lock, 'Lock')
 lock:connect_signal(
   'button::release',
   function()
-    lock_command()
+    awful.spawn('i3lock --clolor 003f6b')
   end
 )
 

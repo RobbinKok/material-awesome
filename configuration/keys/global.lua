@@ -57,7 +57,7 @@ local globalKeys =
     {modkey},
     'l',
     function()
-      awful.spawn(apps.default.lock)
+      suspend_command()
     end
   ),
   awful.key(
@@ -229,9 +229,9 @@ local globalKeys =
   ),
   awful.key(
     {},
-    'XF86AudioNext',
+    '',
     function()
-      --
+      awful.spawn('/home/robbin/brightness.sh + LVDS-1')
     end,
     {description = 'toggle mute', group = 'hotkeys'}
   ),

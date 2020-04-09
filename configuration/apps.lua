@@ -5,7 +5,7 @@ local get_dpi = require('beautiful').xresources.get_dpi
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'kitty',
+    terminal = 'termite',
     editor = 'Code',
     rofi = 'rofi -dpi ' .. get_dpi() .. ' -width ' .. with_dpi(400) .. ' -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi',
     lock = 'i3lock-fancy-rapid 5 3 -k --timecolor=ffffffff --datecolor=ffffffff',
