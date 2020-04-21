@@ -64,7 +64,7 @@ local globalKeys =
     {},
     'Print',
     function()
-      awful.util.spawn_with_shell('maim -s | xclip -selection clipboard -t image/png')
+      awful.util.spawn_with_shell('flameshot gui')
     end
   ),
   -- Standard program
@@ -226,6 +226,30 @@ local globalKeys =
       awful.spawn('amixer -D pulse set Master 1+ toggle')
     end,
     {description = 'toggle mute', group = 'hotkeys'}
+  ),
+  awful.key(
+    {},
+    'XF86AudioPlay',
+    function()
+      awful.util.spawn("playerctl play-pause", false)
+    end,
+    {description = 'volume down', group = 'hotkeys'}
+  ),
+  awful.key(
+    {},
+    'XF86AudioNext',
+    function()
+      awful.util.spawn("playerctl next", false)
+    end,
+    {description = 'volume down', group = 'hotkeys'}
+  ),
+  awful.key(
+    {},
+    'XF86AudioPrev',
+    function()
+      awful.util.spawn("playerctl previous", false)
+    end,
+    {description = 'volume down', group = 'hotkeys'}
   ),
   awful.key(
     {},
